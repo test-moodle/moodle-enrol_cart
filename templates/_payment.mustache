@@ -1,0 +1,35 @@
+<form action="{{{payment_url}}}" method="post">
+
+    {{#show_gateway}}
+    <div class="cart-summary-title">
+        <h4>{{#str}} choose_gateway, enrol_cart {{/str}}</h4>
+    </div>
+    <div class="cart-summary cart-summary--gateways">
+        {{#gateways}}
+            <div class="cart-gateway-item">
+                <label class="cart-gateway-item__label">
+                    <input name="gateway" type="radio" value="{{name}}"{{#selected}} checked="checked"{{/selected}}/>
+                    {{#icon_url}}<span class="cart-gateway-item__img"><img src="{{icon_url}}" alt="{{name}}"/></span>{{/icon_url}}
+                    <span class="cart-gateway-item__title">{{title}}</span>
+                </label>
+            </div>
+        {{/gateways}}
+    </div>
+    {{/show_gateway}}
+
+    <div class="cart-summary cart-summary--payment">
+        <input type="hidden" name="id" value="{{cart.id}}"/>
+        {{#cart.couponDiscountAmount}}
+            <input type="hidden" name="coupon_code" value="{{cart.couponCode}}"/>
+        {{/cart.couponDiscountAmount}}
+        <input type="hidden" name="sesskey" value="{{session_key}}">
+        {{#cart.finalPayable}}
+            <button class="btn btn-primary btn-block" type="submit">{{#str}} pay, enrol_cart {{/str}}</button>
+        {{/cart.finalPayable}}
+        {{^cart.finalPayable}}
+            <button class="btn btn-primary btn-block" type="submit">{{#str}}
+                complete_purchase, enrol_cart {{/str}}</button>
+        {{/cart.finalPayable}}
+    </div>
+
+</form>

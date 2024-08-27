@@ -1,0 +1,38 @@
+<div class="cart-items">
+    {{#items}}
+        <div class="cart-item">
+            <div class="cart-item__grid">
+                <div class="cart-item__thumb">
+                    {{#course.imageUrl}}
+                        <a class="cart-item__image d-flex justify-content-sm-center" href="{{{viewUrl}}}">
+                            <img class="img-responsive" src="{{course.imageUrl}}" alt="{{course.title}}"/>
+                        </a>
+                    {{/course.imageUrl}}
+                </div>
+                <div class="cart-item__info">
+                    <h5 class="cart-item__title">
+                        <a href="{{{viewUrl}}}">{{course.title}}</a>
+                    </h5>
+                    <div class="cart-item__cost">
+                        {{#hasDiscount}}
+                            <div class="cart-item__price"><span class="currency">{{{priceFormatted}}}</span></div>
+                            <div class="cart-item__payable">
+                                <span class="currency">{{{payableFormatted}}}</span>
+                                <span class="cart-item__discount-percent">{{discountPercentFormatted}}</span>
+                            </div>
+                        {{/hasDiscount}}
+                        {{^hasDiscount}}
+                            <div class="cart-item__payable"><span class="currency">{{{payableFormatted}}}</span></div>
+                        {{/hasDiscount}}
+                    </div>
+                    {{#can_remove_items}}
+                        <div class="cart-item__actions">
+                            <a href="{{{removeUrl}}}" class="btn btn-secondary"><i class="fa fa-remove"></i> {{#str}}
+                                remove{{/str}}</a>
+                        </div>
+                    {{/can_remove_items}}
+                </div>
+            </div>
+        </div>
+    {{/items}}
+</div>

@@ -1,0 +1,20 @@
+<div class="cart-checkout">
+
+    {{> enrol_cart/_items }}
+
+    {{#coupon_form}}
+        <div class="cart-summary cart-summary--coupon-form{{#cart.couponCode}} has-coupon{{/cart.couponCode}}{{#cart.coupon_code}} has-coupon{{/cart.coupon_code}}">
+            {{{coupon_form}}}
+            {{#cart.couponErrorMessage}}
+                <div class="cart-summary--coupon-form__error invalid-feedback">
+                    {{{cart.couponErrorMessage}}}
+                </div>
+            {{/cart.couponErrorMessage}}
+        </div>
+    {{/coupon_form}}
+
+    {{> enrol_cart/_summary_bill }}
+
+    {{> enrol_cart/_payment }}
+
+</div>

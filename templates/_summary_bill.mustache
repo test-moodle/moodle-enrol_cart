@@ -1,0 +1,22 @@
+<div class="cart-summary cart-summary--bill">
+    <div class="cart-summary__grid cart-summary__price">
+        <div class="cart-summary__name">{{#str}} total_order_amount, enrol_cart {{/str}}:</div>
+        <div class="cart-summary__value"><span class="currency">{{{cart.finalPriceFormatted}}}</span></div>
+    </div>
+    {{#cart.itemsDiscountAmount}}
+        <div class="cart-summary__grid cart-summary__discount">
+            <div class="cart-summary__name">{{#str}} discount, enrol_cart {{/str}}:</div>
+            <div class="cart-summary__value"><span class="currency">{{{cart.itemsDiscountAmountFormatted}}}</span></div>
+        </div>
+    {{/cart.itemsDiscountAmount}}
+    {{#cart.couponDiscountAmount}}
+        <div class="cart-summary__grid cart-summary__discount">
+            <div class="cart-summary__name">{{#str}} coupon_discount, enrol_cart {{/str}}:</div>
+            <div class="cart-summary__value"><span class="currency">{{{cart.couponDiscountAmountFormatted}}}</span></div>
+        </div>
+    {{/cart.couponDiscountAmount}}
+    <div class="cart-summary__grid cart-summary__payable">
+        <div class="cart-summary__name">{{#str}} payable, enrol_cart {{/str}}:</div>
+        <div class="cart-summary__value"><span class="currency">{{{cart.finalPayableFormatted}}}</span></div>
+    </div>
+</div>

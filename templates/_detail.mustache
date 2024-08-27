@@ -1,0 +1,12 @@
+{{#show_detail}}
+    <div class="cart-summary cart-summary--detail">
+        {{#cart.user}}
+            <div class="cart-summary__grid">
+                <div class="cart-summary__name">{{#str}} user, enrol_cart {{/str}}:</div>
+                <div class="cart-summary__value">
+                    <a href="{{cart.user.profileUrl}}">{{cart.user.fullName}}</a>
+                </div>
+            </div>
+        {{/cart.user}}
+    </div>
+{{/show_detail}}
