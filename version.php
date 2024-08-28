@@ -14,5 +14,5 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version = 2024082700;
-$plugin->requires = 2018051700;
+$plugin->requires = 2020110300;
 $plugin->component = 'enrol_cart';
