@@ -1,4 +1,4 @@
-# Cart Enrolment Method
+# Moodle Cart Enrolment Method
 
 This is a complete shopping cart plugin for Moodle that adds a "Cart" enrolment
 method to courses, allowing users to add courses to their cart and complete the
@@ -17,8 +17,8 @@ checkout.
 
 
 ## Requirements
-1. Moodle version 3.10 or greater.
-2. PHP 7.4
+1. Moodle version 3.10 or later
+2. PHP 7.4 or later
 
 
 ## Translations available
@@ -33,7 +33,7 @@ checkout.
 
 > During installation, you need to set up the "Payment Account", "Currency", and
 > "Payment Gateway" in three steps. These settings can also be adjusted later under
-> "Site Administration > Plugins > Enrolments > Cart."
+> "Site Administration > Plugins > Enrolments > Cart".
 
 
 ## License
