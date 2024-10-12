@@ -233,7 +233,7 @@ class CartItem extends BaseModel
         $discountPercent = $this->discountPercent;
 
         if ($discountPercent) {
-            $discountPercent = '%' . $discountPercent;
+            $discountPercent = $discountPercent . '%';
             if (CartHelper::getConfig('convert_numbers_to_persian')) {
                 return CurrencyFormatter::convertEnglishNumbersToPersian($discountPercent);
             }
