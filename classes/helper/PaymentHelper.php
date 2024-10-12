@@ -118,7 +118,7 @@ class PaymentHelper
                 'icon_url' => (new moodle_url('/theme/image.php', [
                     'theme' => $CFG->theme,
                     'component' => 'paygw_' . $plugin,
-                    'image' => 'icon',
+                    'image' => 'img',
                 ]))->out(),
                 'selected' => false,
             ];
