@@ -191,7 +191,7 @@ if ($ADMIN->fulltree) {
             'enrol_cart/convert_irr_to_irt',
             get_string('convert_irr_to_irt', 'enrol_cart'),
             get_string('convert_irr_to_irt_desc', 'enrol_cart'),
-            true,
+            false,
         ),
     );
 
@@ -201,7 +201,7 @@ if ($ADMIN->fulltree) {
             'enrol_cart/convert_numbers_to_persian',
             get_string('convert_numbers_to_persian', 'enrol_cart'),
             get_string('convert_numbers_to_persian_desc', 'enrol_cart'),
-            true,
+            false,
         ),
     );
 
