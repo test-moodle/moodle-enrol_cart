@@ -11,10 +11,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
-$plugin->component = 'enrol_cart';
-$plugin->version = 2024101500;
-$plugin->requires = 2020110300;
-$plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.0.2';
+function xmldb_enrol_cart_uninstall()
+{
+    global $CFG;
+    $customUserMenuItems = str_replace("my_purchases,enrol_cart|/enrol/cart/my.php\r\n", '', $CFG->customusermenuitems);
+    set_config('customusermenuitems', $customUserMenuItems);
+}
